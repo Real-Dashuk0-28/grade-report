@@ -1,0 +1,18 @@
+[project]
+name = "grade-report"
+version = "0.1.0"
+description = "Grade report analyzer"
+authors = [
+    {name = "Дарья Окладникова",email = "darya_okladnikova28@bk.ru"}
+]
+readme = "README.md"
+requires-python = ">=3.13"
+packages = [{ include = "grade_report" }]
+dependencies = [
+    "rich (>=15.0.0,<16.0.0)",
+]
+
+
+[build-system]
+requires = ["poetry-core>=2.0.0,<3.0.0"]
+build-backend = "poetry.core.masonry.api"
