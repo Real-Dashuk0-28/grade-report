@@ -1,0 +1,10 @@
+{
+  "student_count": 5,
+  "average_score": 84.0,
+  "min_score": 70,
+  "max_score": 95,
+  "group_averages": {
+    "ИС-21": 81.67,
+    "ИС-22": 87.5
+  }
+}
