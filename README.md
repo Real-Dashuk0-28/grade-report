@@ -1,5 +1,12 @@
 # Анализатор успеваемости студентов
 
+
+## Автор
+
+ФИО: [Окладникова Дарья Владимировна]
+
+Группа: [4СПИ]
+
 ## 1. Описание проекта
 
 **Анализатор успеваемости студентов** — консольное приложение на Python для обработки данных об оценках студентов из CSV-файла.
@@ -33,7 +40,10 @@ grade-report/
 │   └── students.csv
 ├── main.py
 ├── README.md
+├── pyproject.toml
+├── poetry.lock
 ├── requirements.txt
+├── grade-report.spec
 └── .gitignore
 ```
 
@@ -44,7 +54,8 @@ grade-report/
 - `students.csv` — пример входных данных.
 - `requirements.txt` — список Python-зависимостей проекта.
 - `.gitignore` — список файлов и папок, которые не нужно добавлять в Git.
-
+- `grade-report.spec` — файл конфигурации для сборки PyInstaller.
+- `pyproject.toml` `poetry.lock` — файлы конфигурации и блокировки зависимостей (Poetry).
 ## 4. Требования
 
 - Python 3.
@@ -102,6 +113,10 @@ student,group,score
 ```powershell
 python main.py data/students.csv --output report.json
 ```
+Или
+```powershell
+poetry run python main.py data/students.csv --output report.json
+```
 
 Где:
 - `data/students.csv` — путь к входному CSV-файлу;
@@ -135,10 +150,11 @@ python main.py data/students.csv --output report.json
 - оценка находится вне диапазона от 0 до 100.
 
 При обнаружении некорректных данных отчёт не должен создаваться.
+## 10. Сборка приложения (PyInstaller)
+Для создания исполняемого файла .exe используйте:
+```powershell
+poetry run pyinstaller --noconfirm --onefile --name "grade-report" main.py
+```
+Готовый файл появится в папке dist/
 
-## 10. Автор
-
-ФИО: [Окладникова Дарья Владимировна]
-
-Группа: [4СПИ]
 
